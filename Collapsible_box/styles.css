@@ -1,0 +1,39 @@
+.summary-box {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-direction: column;
+    background-color: #FFCD00;
+  }
+  
+  .summary-title {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .summary-icon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .summary-title-text {
+    flex: 1;
+  }
+  
+  .summary-content {
+    background-color: #E5E4E2;
+    padding: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: none;
+    color: black;
+  }
+  
+  .summary-content a {
+    color: #C00A35;
+  }
+  

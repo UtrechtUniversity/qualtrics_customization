@@ -1,0 +1,12 @@
+/* Style for the "Remove" button */
+.remove-entry {
+    background-color: #FF4646; /* Red background color */
+    border-radius: 5px; /* Add curved edges */
+    color: white; /* Set text color to white */
+}
+
+/* Style for the "Add" button */
+.add-entry {
+    background-color: #FFCD00;
+    border-radius: 5px; /* Add curved edges */
+}

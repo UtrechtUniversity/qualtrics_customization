@@ -5,8 +5,6 @@ This repository contains customized code which extends the functionality of Qual
 
 ## :floppy_disk: This repository
 
-## :clipboard: **Dataset**
-
 ## :envelope_with_arrow: Contact and contribution
 
 For questions about this repository, please contact the author <a href = "https://github.com/AristotleKandylas" target = "_blank">Aristoteles Kandylas</a>, or open an Issue or Pull request in this repository.

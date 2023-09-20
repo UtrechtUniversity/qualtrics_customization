@@ -1,0 +1,42 @@
+.collapsible {
+  background-color: #FFCD00;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  position: relative;
+  padding-left: 40px;
+  transition: background-color 0.2s ease;
+}
+
+.active, .collapsible:hover {
+  background-color: #b6b4ab;
+}
+
+.collapsible:before {
+  content: '\25B6'; /* Initially pointing to the right */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.active:before {
+  content: "\25B6"; /* Pointing right when active */
+  transform: translateY(-50%) rotate(90deg); /* Rotate the arrow when active */
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color:  #f1f1f1;
+}

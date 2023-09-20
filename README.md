@@ -1,9 +1,8 @@
 # qualtrics_customization
 This repository contains customized code which extends the functionality of Qualtrics as a platform/service for surveys
 
-## :memo: About the Project
-
 ## :floppy_disk: This repository
+
 
 ## :envelope_with_arrow: Contact and contribution
 

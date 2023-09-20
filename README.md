@@ -14,6 +14,10 @@ Code snippets has been taken from websites such as <a href = "https://www.w3scho
 
 ##  <img src="https://cdn-icons-png.flaticon.com/128/610/610064.png" alt="target" style="width: 25px; height: 25px; margin-right: 7px;"/>  Purpose
 
+##  <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" alt="code_use" style="width: 32px; height: 32px; margin-right: 7px;"/>  Use the Code
+
+##  <img src="https://cdn-icons-png.flaticon.com/128/9751/9751797.png" alt="folder_structure" style="width: 32px; height: 32px; margin-right: 7px;"/>  Folder Structure
+
 
 ## :envelope_with_arrow: Contact and contribution
 

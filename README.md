@@ -11,7 +11,7 @@
 ## :page_with_curl: Description
 This repository contains customized code (i.e. html, css and javascript) which extends the functionality of <a href = "https://www.qualtrics.com/core-xm/survey-software/" target ="_blank" >**Qualtrics**</a> as a platform/service for surveys and registration forms. 
 
-Code snippets have been taken from websites such as <a href = "https://www.w3schools.com/howto/howto_js_collapsible.asp" target ="_blank" >**w3schools**</a> and ..., however they have been modified by the author to serve his purpose and match Utrecht University's Corporate Identity.
+Code snippets have been taken from websites such as <a href = "https://www.w3schools.com/howto/default.asp" target ="_blank" >**W3Schools**</a> and <a href = "https://stackoverflow.com/questions/tagged/html" target ="_blank" >**Stackoverflow**</a>, however they have been modified by the author to serve his purpose and match Utrecht University's Corporate Identity.
 
 ##  <img src="https://cdn-icons-png.flaticon.com/128/9751/9751797.png" alt="folder_structure" style="width: 32px; height: 32px; margin-right: 7px;"/>  Folder Structure
 ```bash

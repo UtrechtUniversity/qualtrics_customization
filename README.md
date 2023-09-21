@@ -1,4 +1,4 @@
-<h1 align="center"> Qualtrics Survey Customizations </h1>
+<h1 align="center"> Qualtrics Customizations </h1>
 <div align="center">
     <a href="/LOGO">
         <img src="https://www.qualtrics.com/m/qualtrics-xm-long.svg" alt="qualtrics_logo" style="width: 300px; height: 100px;"  />

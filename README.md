@@ -55,6 +55,7 @@ In order to help other researchers/users of the platform from Utrecht University
 - Select **_HMTL View_**.
 - Copy and paste the provided code (individual README file in each folder) in the HMTL View.
   - Demonstration for the <a href = "https://github.com/AristotleKandylas/qualtrics_customization/tree/main/Collapsible_boxes/Collapsible_box" target ="_blank" >**_Collapsible_box_**</a> code.
+<br/><br/>
   ```html
   <!DOCTYPE html>
     <html>
@@ -134,13 +135,15 @@ In order to help other researchers/users of the platform from Utrecht University
     </body>
     </html>
   ```
-- Then you can adjust your code according to your preference/need.
+- Then you can adjust the code according to your preference/need.
 
 <h3> <em>Customized questions with embedded data </em></h3>
 For customized questions such as the Additional_entries & Autocompletion_feature  you should follow all the previous steps. However, in order to save/store the information filled out by the participant in this question you should additionally:
+<br/><br/>
 
 - Set corresponding **_Embedded data_** fields in the **Survey Flow**, before the block where this question has been added.
 - Include lines of code which store the filled out values in the corresponding Embedded data in your code (This lines have already been included in the provided codes).
+<br/><br/>
     ```javascript
     // Update embedded data fields
                 if (inputField.attr("id") === "fullName") {
@@ -157,8 +160,8 @@ For customized questions such as the Additional_entries & Autocompletion_feature
                     Qualtrics.SurveyEngine.setEmbeddedData('id', selectedValue);
                 }
     ```
-<h6 align="center"> Code lines used to store the filled out values to the corresponding Embedded data fields for the <a href = "https://github.com/AristotleKandylas/qualtrics_customization/blob/main/Autocompletion_feature/script.js" target ="_blank" >Autocompletion_feature</a></h6>
 
+<h6 align="center"> Code lines used to store the filled out values to the corresponding Embedded data fields for the <a href = "https://github.com/AristotleKandylas/qualtrics_customization/blob/main/Autocompletion_feature/script.js" target ="_blank" >Autocompletion_feature</a></h6>
 
 ## :envelope_with_arrow: Contact and contribution
 

@@ -48,9 +48,95 @@ Code snippets have been taken from websites such as <a href = "https://www.w3sch
 In order to help other researchers/users of the platform from Utrecht University or any other interested party, the author created this repository which contains (frontend development) code to design customized questions for your surveys or registration forms. Snippets of code can be either used for the introduction section of a survey/form (e.g. collapsible box) or to enhance the participants' experience when filling it out (e.g. autocompletion feature).
 
 ##  <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" alt="code_use" style="width: 32px; height: 32px; margin-right: 7px;"/>  Use the Code
+<h3> <em>Customized questions with no embedded data </em></h3>
 
+- Add a new **_Text/Graphic_** question in your survey/form.
+- Click on the **_Click to write the question text_** to enable text editing.
+- Select **_HMTL View_**.
+- Copy and paste the provided code (individual README file in each folder) in the HMTL View.
+  - Demonstration for the <ins>**Collapsible_box**</ins>.
+  ```html
+  <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .collapsible {
+      background-color: #FFCD00;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      position: relative;
+      padding-left: 40px;
+      transition: background-color 0.2s ease;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: #b6b4ab;
+    }
+    
+    .collapsible:before {
+      content: '\25B6'; /* Initially pointing to the right */
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.2s ease;
+    }
+    
+    .active:before {
+      content: "\25B6"; /* Pointing right when active */
+      transform: translateY(-50%) rotate(90deg); /* Rotate the arrow when active */
+    }
+    
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color:  #f1f1f1;
+    }
+    
+    </style>
+    </head>
+    <body>
+    
+    <p>Collapsible box</p>
+    <button class="collapsible"> Title </button>
+    <div class="content">
+      <p>Put the text of your preference here.</p>
+    </div>
+    
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+    
+    </body>
+    </html>
+  ```
+- Then you can adjust your code according to your preference/need.
 
-
+<h3> <em>Customized questions with embedded data </em></h3>
 
 ## :envelope_with_arrow: Contact and contribution
 

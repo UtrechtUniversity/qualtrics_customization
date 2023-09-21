@@ -13,14 +13,43 @@ This repository contains customized code (i.e. html, css and javascript) which e
 
 Code snippets have been taken from websites such as <a href = "https://www.w3schools.com/howto/howto_js_collapsible.asp" target ="_blank" >**w3schools**</a> and ..., however they have been modified by the author to serve his purpose and match Utrecht University's Corporate Identity.
 
-
+##  <img src="https://cdn-icons-png.flaticon.com/128/9751/9751797.png" alt="folder_structure" style="width: 32px; height: 32px; margin-right: 7px;"/>  Folder Structure
+```bash
+│   LICENSE
+│   README.md
+│   
+├───Additional_entries
+│       index.html
+│       README.md
+│       script.js
+│       styles.css
+│       
+├───Autocompletion_feature
+│       index.html
+│       README.md
+│       script.js
+│       styles.css
+│       
+└───Collapsible_boxes
+    ├───Collapsible_box
+    │       index.html
+    │       README.md
+    │       script.js
+    │       styles.css
+    │       
+    └───Set_of_collpsible_boxes
+            index.html
+            README.md
+            script.js
+            styles.css
+```
 
 ##  <img src="https://cdn-icons-png.flaticon.com/128/610/610064.png" alt="target" style="width: 25px; height: 25px; margin-right: 7px;"/>  Purpose
 In order to help other researchers/users of the platform from Utrecht University or any other interested party, the author created this repository which contains (frontend development) code to design customized questions for your surveys or registration forms. Snippets of code can be either used for the introduction section of a survey/form (e.g. collapsible box) or to enhance the participants' experience when filling it out (e.g. autocompletion feature).
 
 ##  <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" alt="code_use" style="width: 32px; height: 32px; margin-right: 7px;"/>  Use the Code
 
-##  <img src="https://cdn-icons-png.flaticon.com/128/9751/9751797.png" alt="folder_structure" style="width: 32px; height: 32px; margin-right: 7px;"/>  Folder Structure
+
 
 
 ## :envelope_with_arrow: Contact and contribution

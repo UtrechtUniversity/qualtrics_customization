@@ -16,7 +16,7 @@ Code snippets have been taken from websites such as <a href = "https://www.w3sch
 
 
 ##  <img src="https://cdn-icons-png.flaticon.com/128/610/610064.png" alt="target" style="width: 25px; height: 25px; margin-right: 7px;"/>  Purpose
-In order to help other researchers/users of the platform from Utrecht University or any other interested party, the author created this repository which contains (frontend development) code to design customized questions for your surveys or registration forms. Snippets of code can be either used for the introduction section of a survey (e.g. collapsible box) or to enhance the participants' experience when filling it out (e.g. autocompletion feature).
+In order to help other researchers/users of the platform from Utrecht University or any other interested party, the author created this repository which contains (frontend development) code to design customized questions for your surveys or registration forms. Snippets of code can be either used for the introduction section of a survey/form (e.g. collapsible box) or to enhance the participants' experience when filling it out (e.g. autocompletion feature).
 
 ##  <img src="https://cdn-icons-png.flaticon.com/128/3242/3242257.png" alt="code_use" style="width: 32px; height: 32px; margin-right: 7px;"/>  Use the Code
 

@@ -5,7 +5,7 @@
     </a>
 </div>
 
-<h4 align="center"> <ins> ❗ Note: This is not an official repository created either by Qualtrics or contributor(s) of the official platform ❗ </ins></h4>
+<h4 align="center"> <ins> ❗ Note: This is not an official repository created either by Qualtrics XM or contributor(s) of the official platform ❗ </ins></h4>
 
 
 ## :page_with_curl: Description

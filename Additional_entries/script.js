@@ -20,20 +20,17 @@ $(document).ready(function() {
 
     // Function to add an entry block
     $(document).on("click", ".add-entry", function() {
-        var entryBlock = $(".entry_block:first").clone();
-        entryBlock.find("input").val("");
-        entryBlock.find(".add-entry").hide();
-        entryBlock.find(".remove-entry").show(); // Show the remove button
-        $("#max-entries-message").before(entryBlock);
-        updateButtonVisibility();
+        // JavaScript code to add an entry block
     });
 
     // Function to remove an entry block
     $(document).on("click", ".remove-entry", function() {
-        if ($(".entry_block").length > 1) {
-            $(this).closest(".entry_block").remove();
-            updateButtonVisibility();
-        }
+        // JavaScript code to remove an entry block
+    });
+
+    // Function to update embedded data fields
+    $(document).on("input", "input[type='text'], input[type='email']", function() {
+        // JavaScript code to update embedded data fields
     });
 
     updateButtonVisibility();

@@ -16,7 +16,7 @@ To implement the provided code of this folder on your Qualtrics survey/form:
     <style>
         /* Style for the "Remove" button */
         .remove-entry {
-            background-color: #FF4646; /* Red background color */
+            background-color:  #C00A35; /* Red background color */
             border-radius: 5px; /* Add curved edges */
             color: white; /* Set text color to white */
         }

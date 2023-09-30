@@ -145,20 +145,21 @@ For customized questions such as the Additional_entries & Autocompletion_feature
 - Include lines of code which store the filled out values in the corresponding Embedded data in your code (This lines have already been included in the provided codes).
 <br/><br/>
     ```javascript
-    // Update embedded data fields
-                if (inputField.attr("id") === "fullName") {
-                    Qualtrics.SurveyEngine.setEmbeddedData('fullName', selectedValue);
-                    Qualtrics.SurveyEngine.setEmbeddedData('email', selectedData.email);
-                    Qualtrics.SurveyEngine.setEmbeddedData('id', selectedData.id);
-                } else if (inputField.attr("id") === "email") {
-                    Qualtrics.SurveyEngine.setEmbeddedData('fullName', Object.keys(data).find(key => data[key] === selectedData));
-                    Qualtrics.SurveyEngine.setEmbeddedData('email', selectedValue);
-                    Qualtrics.SurveyEngine.setEmbeddedData('id', selectedData.id);
-                } else if (inputField.attr("id") === "id") {
-                    Qualtrics.SurveyEngine.setEmbeddedData('fullName', Object.keys(data).find(key => data[key] === selectedData));
-                    Qualtrics.SurveyEngine.setEmbeddedData('email', selectedData.email);
-                    Qualtrics.SurveyEngine.setEmbeddedData('id', selectedValue);
-                }
+  // Update embedded data fields
+        var entryNumber = inputField.attr("id") === "fullName" ? "1" : "2";
+        if (inputField.attr("id") === "fullName") {
+            Qualtrics.SurveyEngine.setEmbeddedData('metadata_name', selectedValue);
+
+            // Autocomplete the Email field
+            $("#email").val(data[selectedValue].email);
+            Qualtrics.SurveyEngine.setEmbeddedData('metadata_email', data[selectedValue].email);
+        } else if (inputField.attr("id") === "email") {
+            Qualtrics.SurveyEngine.setEmbeddedData('metadata_email', selectedValue);
+
+            // Autocomplete the Full Name field
+            $("#fullName").val(Object.keys(data).find(key => data[key].email === selectedValue));
+            Qualtrics.SurveyEngine.setEmbeddedData('metadata_name', Object.keys(data).find(key => data[key].email === selectedValue));
+        }
     ```
 
 <h6 align="center"> Code lines used to store the filled out values to the corresponding Embedded data fields for the <a href = "https://github.com/AristotleKandylas/qualtrics_customization/blob/main/Autocompletion_feature/script.js" target ="_blank" >Autocompletion_feature</a></h6>

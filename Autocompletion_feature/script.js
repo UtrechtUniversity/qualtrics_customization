@@ -1,7 +1,7 @@
 $(document).ready(function() {
     var data = {
-        "name1": { email: "email1@domain.com", id: "ID001" },
-        "name2": { email: "email2@domain.com", id: "ID002" },
+        "name1": { email: "email1@domain.com" },
+        "name2": { email: "email2@domain.com" }
         // Add more mappings as needed
     };
 
@@ -13,44 +13,35 @@ $(document).ready(function() {
                 $.each(data, function(key, value) {
                     if (sourceKey === "full_name" && key.toLowerCase().indexOf(term) !== -1) {
                         suggestions.push(key);
-                    } else if (sourceKey !== "full_name" && value[sourceKey].toLowerCase().indexOf(term) !== -1) {
-                        suggestions.push(value[sourceKey]);
+                    } else if (sourceKey === "email" && value.email.toLowerCase().indexOf(term) !== -1) {
+                        suggestions.push(value.email);
                     }
                 });
                 response(suggestions);
             },
             select: function(event, ui) {
                 var selectedValue = ui.item.value;
-                var selectedData;
-                if (sourceKey === "full_name") {
-                    selectedData = data[selectedValue];
-                    $("#fullName").val(selectedValue);
-                } else {
-                    selectedData = Object.values(data).find(item => item[sourceKey] === selectedValue);
-                    $("#fullName").val(Object.keys(data).find(key => data[key] === selectedData));
-                }
-                $("#email").val(selectedData.email);
-                $("#id").val(selectedData.id);
-                
-                // Update embedded data fields only if sourceKey is not "full_name"
+                inputField.val(selectedValue);
+
+                // Update embedded data fields
+                var entryNumber = inputField.attr("id") === "fullName" ? "1" : "2";
                 if (inputField.attr("id") === "fullName") {
-                    Qualtrics.SurveyEngine.setEmbeddedData('fullName', selectedValue);
-                    Qualtrics.SurveyEngine.setEmbeddedData('email', selectedData.email);
-                    Qualtrics.SurveyEngine.setEmbeddedData('id', selectedData.id);
+                    Qualtrics.SurveyEngine.setEmbeddedData('metadata_name', selectedValue);
+
+                    // Autocomplete the Email field
+                    $("#email").val(data[selectedValue].email);
+                    Qualtrics.SurveyEngine.setEmbeddedData('metadata_email', data[selectedValue].email);
                 } else if (inputField.attr("id") === "email") {
-                    Qualtrics.SurveyEngine.setEmbeddedData('fullName', Object.keys(data).find(key => data[key] === selectedData));
-                    Qualtrics.SurveyEngine.setEmbeddedData('email', selectedValue);
-                    Qualtrics.SurveyEngine.setEmbeddedData('id', selectedData.id);
-                } else if (inputField.attr("id") === "id") {
-                    Qualtrics.SurveyEngine.setEmbeddedData('fullName', Object.keys(data).find(key => data[key] === selectedData));
-                    Qualtrics.SurveyEngine.setEmbeddedData('email', selectedData.email);
-                    Qualtrics.SurveyEngine.setEmbeddedData('id', selectedValue);
+                    Qualtrics.SurveyEngine.setEmbeddedData('metadata_email', selectedValue);
+
+                    // Autocomplete the Full Name field
+                    $("#fullName").val(Object.keys(data).find(key => data[key].email === selectedValue));
+                    Qualtrics.SurveyEngine.setEmbeddedData('metadata_name', Object.keys(data).find(key => data[key].email === selectedValue));
                 }
             }
         });
     }
 
-    applyAutocomplete($("#fullName"), "full_name", "fullName"); // Apply autocomplete for Full Name using keys from data
-    applyAutocomplete($("#email"), "email", "email"); // Apply autocomplete for Email using Email data
-    applyAutocomplete($("#id"), "id", "id"); // Apply autocomplete for ID using ID data
+    applyAutocomplete($("#fullName"), "full_name", "metadata_name"); // Apply autocomplete for Full Name using keys from data
+    applyAutocomplete($("#email"), "email", "metadata_email"); // Apply autocomplete for Email using Email data
 });
